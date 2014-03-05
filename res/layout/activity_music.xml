@@ -1,0 +1,85 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MusicActivity" >
+
+    <ImageView
+        android:id="@+id/cover"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/me_mf" />
+
+    <Button
+        android:id="@+id/button_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button_pause"
+        android:layout_alignRight="@+id/button_pause"
+        android:layout_toRightOf="@id/cover"
+        android:onClick="playMusic"
+        android:text="@string/play" />
+
+    <Button
+        android:id="@+id/button_pause"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_play"
+        android:layout_toRightOf="@id/cover"
+        android:onClick="pauseMusic"
+        android:text="@string/pause" />
+
+    <Button
+        android:id="@+id/button_stop"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/button_pause"
+        android:layout_alignRight="@id/button_pause"
+        android:layout_below="@id/button_pause"
+        android:onClick="stopMusic"
+        android:text="@string/stop" />
+
+    <LinearLayout
+        android:id="@+id/line"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:weightSum="2" >
+
+        <Button
+            android:id="@+id/button_4s"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/dummy" 
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/wiki"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:onClick="openWiki"
+            android:text="@string/wikipedia"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrolly"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_above="@+id/line"
+        android:layout_below="@id/cover" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/the_text" 
+            android:gravity="center_vertical"/>
+    </ScrollView>
+
+</RelativeLayout>

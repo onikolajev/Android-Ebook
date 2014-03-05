@@ -1,0 +1,39 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/menu_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/main_menu" />
+
+    <Button
+        android:id="@+id/BookB"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="goToBook"
+        android:text="@string/menu_e_book" />
+
+    <Button
+        android:id="@+id/FormB"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="goToForm"
+        android:text="@string/menu_form" />
+
+    <Button
+        android:id="@+id/MusicB"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="goToMusic"
+        android:text="@string/menu_music" />
+    <Button
+        android:id="@+id/ImageB"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="goToImage"
+        android:text="@string/menu_image" />
+
+</LinearLayout>
