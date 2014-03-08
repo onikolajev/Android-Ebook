@@ -5,29 +5,42 @@
     android:layout_height="match_parent"
     tools:context=".MusicActivity" >
 
-    <Button
-        android:id="@+id/draw_line"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/buttons"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:onClick="drawLine"
-        android:text="@string/image_button" />
+        android:layout_alignParentBottom="true" >
 
-    <Button
-        android:id="@+id/clear_canvas"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_toRightOf="@id/draw_line"
-        android:onClick="clearCanvas"
-        android:text="@string/clear_canvas" />
+        <Button
+            android:id="@+id/draw_line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="drawLine"
+            android:text="@string/image_button" />
+
+        <Button
+            android:id="@+id/clear_canvas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="clearCanvas"
+            android:text="@string/clear_canvas" />
+
+        <Button
+            android:id="@+id/choose_bitmap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="chooseBitmap"
+            android:text="Choose bitmap" />
+    </LinearLayout>
 
     <ImageView
         android:id="@+id/image12"
         android:layout_width="fill_parent"
         android:layout_height="1dp"
-        android:layout_above="@id/draw_line"
+        android:layout_above="@id/buttons"
         android:layout_alignParentTop="true" />
 
 </RelativeLayout>
