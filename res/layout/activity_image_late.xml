@@ -11,29 +11,37 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true" >
 
-        <Button
+        <ImageButton
             android:id="@+id/draw_line"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="drawLine"
-            android:text="@string/image_button" />
+            android:src="@android:drawable/ic_menu_add" />
 
-        <Button
+        <ImageButton
             android:id="@+id/clear_canvas"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="clearCanvas"
-            android:text="@string/clear_canvas" />
+            android:src="@android:drawable/ic_menu_close_clear_cancel" />
 
-        <Button
+        <ImageButton
             android:id="@+id/choose_bitmap"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="chooseBitmap"
-            android:text="Choose bitmap" />
+            android:src="@android:drawable/ic_menu_gallery" />
+        
+        <ImageButton
+            android:id="@+id/save_bitmap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="statisticActivity"
+            android:src="@android:drawable/ic_menu_save"/>"
     </LinearLayout>
 
     <ImageView

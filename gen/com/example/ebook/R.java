@@ -25,29 +25,34 @@ public final class R {
         public static final int me_mf=0x7f020001;
     }
     public static final class id {
-        public static final int BookB=0x7f090006;
-        public static final int FormB=0x7f090007;
-        public static final int ImageB=0x7f090009;
-        public static final int MusicB=0x7f090008;
-        public static final int action_settings=0x7f090016;
-        public static final int button=0x7f090001;
-        public static final int button1=0x7f090003;
-        public static final int button_4s=0x7f09000f;
-        public static final int button_pause=0x7f09000c;
-        public static final int button_play=0x7f09000b;
-        public static final int button_stop=0x7f09000d;
-        public static final int cover=0x7f09000a;
-        public static final int image12=0x7f090002;
-        public static final int lastnameEdit=0x7f090014;
-        public static final int line=0x7f09000e;
-        public static final int menu_header=0x7f090005;
+        public static final int BookB=0x7f09000a;
+        public static final int FormB=0x7f09000b;
+        public static final int ImageB=0x7f09000d;
+        public static final int MusicB=0x7f09000c;
+        public static final int action_settings=0x7f09001b;
+        public static final int button1=0x7f090007;
+        public static final int button_4s=0x7f090013;
+        public static final int button_pause=0x7f090010;
+        public static final int button_play=0x7f09000f;
+        public static final int button_stop=0x7f090011;
+        public static final int buttons=0x7f090001;
+        public static final int choose_bitmap=0x7f090004;
+        public static final int clear_canvas=0x7f090003;
+        public static final int cover=0x7f09000e;
+        public static final int draw_line=0x7f090002;
+        public static final int graph=0x7f090017;
+        public static final int image12=0x7f090006;
+        public static final int lastnameEdit=0x7f090019;
+        public static final int line=0x7f090012;
+        public static final int menu_header=0x7f090009;
         public static final int message=0x7f090000;
-        public static final int nameEdit=0x7f090013;
-        public static final int phoneEdit=0x7f090015;
-        public static final int scrolly=0x7f090011;
-        public static final int textView1=0x7f090012;
-        public static final int webView1=0x7f090004;
-        public static final int wiki=0x7f090010;
+        public static final int nameEdit=0x7f090018;
+        public static final int phoneEdit=0x7f09001a;
+        public static final int save_bitmap=0x7f090005;
+        public static final int scrolly=0x7f090015;
+        public static final int textView1=0x7f090016;
+        public static final int webView1=0x7f090008;
+        public static final int wiki=0x7f090014;
     }
     public static final class layout {
         public static final int activity_display_message=0x7f030000;
@@ -56,7 +61,8 @@ public final class R {
         public static final int activity_main=0x7f030003;
         public static final int activity_menu=0x7f030004;
         public static final int activity_music=0x7f030005;
-        public static final int activity_sub=0x7f030006;
+        public static final int activity_stats=0x7f030006;
+        public static final int activity_sub=0x7f030007;
     }
     public static final class menu {
         public static final int display_message=0x7f080000;
@@ -64,7 +70,8 @@ public final class R {
         public static final int main=0x7f080002;
         public static final int menu=0x7f080003;
         public static final int music=0x7f080004;
-        public static final int sub=0x7f080005;
+        public static final int statistic=0x7f080005;
+        public static final int sub=0x7f080006;
     }
     public static final class raw {
         public static final int music=0x7f040000;
@@ -73,6 +80,7 @@ public final class R {
         public static final int action_settings=0x7f060001;
         public static final int app_name=0x7f060000;
         public static final int button=0x7f06000a;
+        public static final int clear_canvas=0x7f060019;
         public static final int dummy=0x7f060012;
         public static final int hello_world=0x7f060002;
         public static final int image_button=0x7f060009;
@@ -90,6 +98,7 @@ public final class R {
         public static final int title_activity_image=0x7f060008;
         public static final int title_activity_menu=0x7f060005;
         public static final int title_activity_music=0x7f060006;
+        public static final int title_activity_statistic=0x7f06001a;
         public static final int title_activity_sub=0x7f060003;
         public static final int wikipedia=0x7f060013;
         public static final int your_lastname=0x7f060016;

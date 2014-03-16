@@ -28,7 +28,7 @@
 \nСмысл объяснения виртуальной зависимости в свете теории Скиннера заключается в том, что человек, продвигаясь по уровням компьютерной игры, получает «подкрепления» – маленькие психологические удовольствия, возникающие в результате выигрыша или победы. Возникновение зависимости от игры объясняется тем, что в реальной жизни человек получает гораздо меньше «подкреплений», а в игре он может получать их постоянно. 
 \nОднако те же самые «маленькие удовольствия» мы все можем получить, играя в настольные игры, решая кроссворд, спускаясь с горы на лыжах и т.д. Все это сегодня ничуть не менее доступно, чем виртуальная игра. Так почему же человек выбирает именно виртуальный мир и виртуальные «подкрепления»? Приверженцы концепции Скиннера не дают ответа на этот вопрос. "    </string>
     <string name="title_activity_image">ImageActivity</string>
-    <string name="image_button">Draw a line</string>
+    <string name="image_button">Line</string>
     <string name="button">E-book</string>
     <string name="menu_e_book">E-book</string>
     <string name="menu_form">Form</string>
@@ -44,6 +44,7 @@
     <string name="your_lastname">Your lastname</string>
     <string name="your_name">Your name</string>
     <string name="main_menu">Main_menu</string>
-    <string name="clear_canvas">Clear Canvas</string>
+    <string name="clear_canvas">Clear</string>
+    <string name="title_activity_statistic">StatisticActivity</string>
 
 </resources>

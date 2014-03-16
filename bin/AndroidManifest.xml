@@ -39,13 +39,17 @@
         </activity>
         <activity
             android:name="com.example.ebook.MusicActivity"
-            android:label="@string/title_activity_music"
-            android:configChanges="orientation|screenSize" >
+            android:configChanges="orientation|screenSize"
+            android:label="@string/title_activity_music" >
         </activity>
         <activity
             android:name="com.example.ebook.ImageActivity"
-            android:label="@string/title_activity_image"
-            android:configChanges="orientation|screenSize" >
+            android:configChanges="orientation|screenSize"
+            android:label="@string/title_activity_image" >
+        </activity>
+        <activity
+            android:name="com.example.ebook.StatsActivity"
+            android:label="@string/title_activity_statistic" >
         </activity>
     </application>
 
