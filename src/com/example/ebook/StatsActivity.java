@@ -2,6 +2,7 @@ package com.example.ebook;
 
 import android.app.Activity;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.LinearLayout;
@@ -42,11 +43,17 @@ public class StatsActivity extends Activity {
 		GraphView graphView = new BarGraphView(this, "Line Statistics");
 		graphView.addSeries(mGraphSeries);
 		graphView.setHorizontalLabels(new String[] { "Low", "Medium", "Short", "" });
+		graphView.getGraphViewStyle().setNumHorizontalLabels(3);
 		// graphView.setVerticalLabels(new String[]{"Low", "Medium", "Short"});
 		
 		//Style
 		graphView.getGraphViewStyle().setTextSize(12);
-
+		graphView.setBackgroundColor(Color.BLACK);
+		graphView.getGraphViewStyle().setGridColor(Color.BLACK);
+		graphView.getGraphViewStyle().setHorizontalLabelsColor(Color.WHITE);
+		graphView.getGraphViewStyle().setVerticalLabelsColor(Color.WHITE);
+		((BarGraphView) graphView).setDrawValuesOnTop(true);
+		
 		LinearLayout ll = (LinearLayout) findViewById(R.id.graph);
 		ll.addView(graphView);
 	}
