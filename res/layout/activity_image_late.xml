@@ -34,14 +34,14 @@
             android:layout_weight="1"
             android:onClick="chooseBitmap"
             android:src="@android:drawable/ic_menu_gallery" />
-        
+
         <ImageButton
             android:id="@+id/save_bitmap"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_height="match_parent"
             android:onClick="statisticActivity"
-            android:src="@android:drawable/ic_menu_save"/>"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_menu_statistics" />
     </LinearLayout>
 
     <ImageView
