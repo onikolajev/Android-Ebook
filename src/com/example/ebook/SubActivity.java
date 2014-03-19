@@ -1,13 +1,13 @@
 package com.example.ebook;
 
-import com.example.ebook.R;
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
-public class SubActivity extends Activity {
+import com.actionbarsherlock.app.SherlockActivity;
+
+public class SubActivity extends SherlockActivity {
 	public final static String EXTRA_MESSAGE = "com.example.ebook.MESSAGE";
 
 	@Override

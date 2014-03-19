@@ -46,5 +46,8 @@
     <string name="main_menu">Main_menu</string>
     <string name="clear_canvas">Clear</string>
     <string name="title_activity_statistic">StatisticActivity</string>
+    <string name="choose_image">Choose image</string>
+    <string name="clear_image">Clear image</string>
+    <string name="statistics">Statistics</string>
 
 </resources>

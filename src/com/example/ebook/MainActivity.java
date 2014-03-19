@@ -1,7 +1,5 @@
 package com.example.ebook;
 
-import com.example.ebook.R;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;

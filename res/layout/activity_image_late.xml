@@ -5,50 +5,19 @@
     android:layout_height="match_parent"
     tools:context=".MusicActivity" >
 
-    <LinearLayout
-        android:id="@+id/buttons"
-        android:layout_width="match_parent"
+    <ImageButton
+        android:id="@+id/draw_line"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true" >
-
-        <ImageButton
-            android:id="@+id/draw_line"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:onClick="drawLine"
-            android:src="@android:drawable/ic_menu_add" />
-
-        <ImageButton
-            android:id="@+id/clear_canvas"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:onClick="clearCanvas"
-            android:src="@android:drawable/ic_menu_close_clear_cancel" />
-
-        <ImageButton
-            android:id="@+id/choose_bitmap"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:onClick="chooseBitmap"
-            android:src="@android:drawable/ic_menu_gallery" />
-
-        <ImageButton
-            android:id="@+id/save_bitmap"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:onClick="statisticActivity"
-            android:scaleType="centerInside"
-            android:src="@drawable/ic_menu_statistics" />
-    </LinearLayout>
+        android:layout_alignParentBottom="true"
+        android:onClick="drawLine"
+        android:src="@android:drawable/ic_menu_add" />
 
     <ImageView
         android:id="@+id/image12"
         android:layout_width="fill_parent"
         android:layout_height="1dp"
-        android:layout_above="@id/buttons"
+        android:layout_above="@id/draw_line"
         android:layout_alignParentTop="true" />
 
 </RelativeLayout>

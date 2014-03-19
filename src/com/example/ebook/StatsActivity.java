@@ -1,18 +1,18 @@
 package com.example.ebook;
 
-import android.app.Activity;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.LinearLayout;
 
+import com.actionbarsherlock.app.SherlockActivity;
 import com.jjoe64.graphview.BarGraphView;
 import com.jjoe64.graphview.GraphView;
 import com.jjoe64.graphview.GraphView.GraphViewData;
 import com.jjoe64.graphview.GraphViewSeries;
 
-public class StatsActivity extends Activity {
+public class StatsActivity extends SherlockActivity {
 
 	private static final String KEY_SHORT = "Short";
 	private static final String KEY_MEDIUM = "Medium";

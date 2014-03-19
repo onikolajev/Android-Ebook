@@ -1,13 +1,12 @@
 package com.example.ebook;
 
-import com.example.ebook.R;
-
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
-public class DisplayMessageActivity extends Activity {
+import com.actionbarsherlock.app.SherlockActivity;
+
+public class DisplayMessageActivity extends SherlockActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

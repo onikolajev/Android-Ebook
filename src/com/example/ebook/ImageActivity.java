@@ -2,7 +2,6 @@ package com.example.ebook;
 
 import java.io.InputStream;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
@@ -17,8 +16,13 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.actionbarsherlock.app.ActionBar;
+import com.actionbarsherlock.app.SherlockActivity;
+import com.actionbarsherlock.view.Menu;
+import com.actionbarsherlock.view.MenuItem;
+import com.actionbarsherlock.view.SubMenu;
 
-public class ImageActivity extends Activity {
+public class ImageActivity extends SherlockActivity {
 
 	private static final String KEY_SHORT = "Short";
 	private static final String KEY_MEDIUM = "Medium";
@@ -41,13 +45,15 @@ public class ImageActivity extends Activity {
 	private int countLong;
 	private int countMedium;
 	private int countShort;
+	private ActionBar actionBar;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_image);
+		actionBar = getSupportActionBar();
 		getResources();
-		mPrefs = getSharedPreferences("stats",MODE_PRIVATE);
+		mPrefs = getSharedPreferences("stats", MODE_PRIVATE);
 		mEditor = mPrefs.edit();
 		countShort = mPrefs.getInt(KEY_SHORT, -1);
 		countMedium = mPrefs.getInt(KEY_MEDIUM, -1);
@@ -71,6 +77,36 @@ public class ImageActivity extends Activity {
 		mImageView = (ImageView) findViewById(R.id.image12);
 		mImageView.setImageBitmap(mBitmap);
 
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+
+		SubMenu subMenu1 = menu.addSubMenu("Actions");
+		subMenu1.add(menu.NONE, 1, menu.NONE, R.string.choose_image);
+		subMenu1.add(menu.NONE, 2, menu.NONE, R.string.clear_image);
+		subMenu1.add(menu.NONE, 3, menu.NONE, R.string.statistics);
+
+		MenuItem subMenu1Item = subMenu1.getItem();
+		subMenu1Item.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS
+				| MenuItem.SHOW_AS_ACTION_WITH_TEXT);
+		return super.onCreateOptionsMenu(menu);
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+		case 1:
+			chooseBitmap();
+			return true;
+		case 2:
+			clearCanvas();
+			return true;
+		case 3:
+			statisticActivity();
+			return true;
+		}
+		return super.onOptionsItemSelected(item);
 	}
 
 	@Override
@@ -142,7 +178,7 @@ public class ImageActivity extends Activity {
 
 	// clears the canvas
 	// method will be called from a push of a button
-	public void clearCanvas(View v) {
+	public void clearCanvas() {
 		Log.d(TAG, "Canvas was cleared!");
 		// if (clearBitmap == null) mCanvas.drawColor(0xFF000000);
 		// mCanvas.drawBitmap(clearBitmap, 0, 0, null);
@@ -150,15 +186,15 @@ public class ImageActivity extends Activity {
 		mCanvas = new Canvas(mBitmap);
 		mImageView.setImageBitmap(mBitmap);
 		Log.d(TAG, "Short: " + mPrefs.getInt(KEY_SHORT, -1));
-		Log.d(TAG, "Medium: " + mPrefs.getInt(KEY_MEDIUM, -1));;
+		Log.d(TAG, "Medium: " + mPrefs.getInt(KEY_MEDIUM, -1));
+		;
 		Log.d(TAG, "Long: " + mPrefs.getInt(KEY_LONG, -1));
-		
-		
+
 	}
 
 	// choose a bitmap from directory
 	// method will be called from a push of a button
-	public void chooseBitmap(View v) {
+	public void chooseBitmap() {
 		Intent i = new Intent(Intent.ACTION_GET_CONTENT);
 		i.setType("image/*");
 		Intent iChooser = Intent.createChooser(i, "Select");
@@ -230,12 +266,12 @@ public class ImageActivity extends Activity {
 			} catch (Exception e) {
 				Log.e(TAG, "Decoding error:", e);
 			}
-			
+
 		}
 	}
-	
-	public void statisticActivity(View v){
-		Intent i = new Intent (this, StatsActivity.class);
+
+	public void statisticActivity() {
+		Intent i = new Intent(this, StatsActivity.class);
 		startActivity(i);
-		}
+	}
 }
